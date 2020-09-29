@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} Hello HomeController!{% endblock %}
+
+{% block body %}
+
+{{dump(tableau)}}
+{{prenom}}
+
+{# for condition #}
+{% for prenom,age in tableau %}
+
+    {% if loop.last or loop.first %}
+
+        <p><b>{{prenom}} a {{age}} ans {{loop.index0}}</b></p>
+
+    {% else %}
+
+        <p>{{prenom}} a {{age}} ans {{loop.index0}}</p>
+
+    {% endif %}
+
+{% endfor %}
+
+
+
+
+
+{% endblock %}
+
