@@ -4,8 +4,15 @@
 
 {% block body %}
 
+{# afficher mon tableau pour le debbug #}
 {{dump(tableau)}}
+
+{# afficher ma variable PHP associé dans le controller pour le debbug #}
 {{prenom}}
+
+{# definir une variable toto via Twig #}
+{% set toto = 'devolder' %}
+
 
 {# for condition #}
 {% for prenom,age in tableau %}
@@ -23,6 +30,22 @@
 {% endfor %}
 
 
+{# affiche ma variable toto créé via Twig #}
+{# apres le pipe | on peux ajouter des filtres ici mettre en maj #}
+{{toto | upper }}
+
+{# filtre raw pour garder la mise en forme #}
+{{toto | raw }}
+
+{# retire tout les balises HTML avec exception entre parenthèses #}
+{{toto | striptags('<br><p>') }}
+
+
+
+{# for avec compteur  qui va compter  de 1 a 10 #}
+{% for compteur in 0..10 %}
+    <p>{{compteur}}</p>
+{% endfor %}
 
 
 
