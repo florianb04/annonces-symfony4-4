@@ -11,7 +11,7 @@ class TestController extends AbstractController
 {
 
     /**
-     * @Route("/test", name="testpage")
+     * @Route("/test", name="test")
      */
     public function index()
     {
@@ -23,6 +23,7 @@ class TestController extends AbstractController
 
         dump($tab);
         dump($a);
+        dump($this);
 
         // on associe les varible PHP en valeur avec des clefs twig
         // on pourra utiliser les varible twig 
