@@ -6,10 +6,12 @@ namespace App\Controller;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
-class HomeController extends AbstractController
+
+class TestController extends AbstractController
 {
+
     /**
-     * @Route("/", name="homepage")
+     * @Route("/test", name="testpage")
      */
     public function index()
     {
@@ -20,7 +22,7 @@ class HomeController extends AbstractController
         dump($tab);
         dump($a);
 
-        return $this->render('home/index.html.twig', [
+        return $this->render('test/test.html.twig', [
             'tableau'=>$tab,
             'prenom'=>$a,
             'age'=>13,
