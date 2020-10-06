@@ -32,6 +32,26 @@ class Ad
      */
     private $price;
 
+    /**
+     * @ORM\Column(type="text")
+     */
+    private $introduction;
+
+    /**
+     * @ORM\Column(type="text")
+     */
+    private $content;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $coverImage;
+
+    /**
+     * @ORM\Column(type="integer")
+     */
+    private $rooms;
+
 
     public function getId(): ?int
     {
@@ -70,6 +90,54 @@ class Ad
     public function setPrice(float $price): self
     {
         $this->price = $price;
+
+        return $this;
+    }
+
+    public function getIntroduction(): ?string
+    {
+        return $this->introduction;
+    }
+
+    public function setIntroduction(string $introduction): self
+    {
+        $this->introduction = $introduction;
+
+        return $this;
+    }
+
+    public function getContent(): ?string
+    {
+        return $this->content;
+    }
+
+    public function setContent(string $content): self
+    {
+        $this->content = $content;
+
+        return $this;
+    }
+
+    public function getCoverImage(): ?string
+    {
+        return $this->coverImage;
+    }
+
+    public function setCoverImage(string $coverImage): self
+    {
+        $this->coverImage = $coverImage;
+
+        return $this;
+    }
+
+    public function getRooms(): ?int
+    {
+        return $this->rooms;
+    }
+
+    public function setRooms(int $rooms): self
+    {
+        $this->rooms = $rooms;
 
         return $this;
     }
